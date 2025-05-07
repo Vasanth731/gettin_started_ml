@@ -157,7 +157,7 @@ def val(model, val_loader, criterion):
 def main():
     model = LeNet5().to(device)
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-    criterion = nn.NLLLoss()
+    criterion = nn.CrossEntropyLoss()
 
     transform = transforms.Compose([
         transforms.Resize((32, 32)), 

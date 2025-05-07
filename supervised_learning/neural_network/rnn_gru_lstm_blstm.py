@@ -85,7 +85,7 @@ def main():
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-    train_dataset = datasets.MNIST(root='./mnist_dataset/', train=True, transform=transforms.ToTensor(), download=False)
+    train_dataset = datasets.MNIST(root='./mnist_dataset/', train=True, transform=transforms.ToTensor(), download=True)
     num_samples = int(0.2 * len(train_dataset))
     train_subset,test_subset = random_split(train_dataset, [num_samples, len(train_dataset) - num_samples])
     train_loader = DataLoader(train_subset, batch_size=batch_size, shuffle=True)

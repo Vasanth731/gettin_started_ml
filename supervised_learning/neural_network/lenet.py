@@ -164,10 +164,10 @@ def main():
         transforms.ToTensor(),
     ])
 
-    train_set = torchvision.datasets.MNIST(root=data_path, train=True, download=False, transform=transform)
+    train_set = torchvision.datasets.MNIST(root=data_path, train=True, download=True, transform=transform)
     train_loader = torch.utils.data.DataLoader(train_set, batch_size=BATCH_SIZE, shuffle=True)
 
-    val_set = torchvision.datasets.MNIST(root=data_path, train=False, download=False, transform=transform)
+    val_set = torchvision.datasets.MNIST(root=data_path, train=False, download=True, transform=transform)
     val_loader = torch.utils.data.DataLoader(val_set, batch_size=BATCH_SIZE, shuffle=False)
 
     best_val_loss = float('inf')

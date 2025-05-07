@@ -7,7 +7,7 @@ from tqdm import tqdm
 from torch import optim
 
 # hyperparameters
-data_path = '/home/htic/amb/data'
+data_path = '/data'
 BATCH_SIZE = 16
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 num_epochs = 50

@@ -186,7 +186,7 @@ def main():
             print(f"Epoch {epoch+1}: Normal checkpoint saved")
 
     accuracy = check_accuracy(train_loader, model)
-    print(f"✔ Accuracy on training set: {accuracy*100:.2f}%")
+    print(f"Accuracy on training set: {accuracy*100:.2f}%")
 
 
 if __name__ == "__main__":
